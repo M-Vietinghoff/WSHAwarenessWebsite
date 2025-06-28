@@ -21,6 +21,7 @@ export default function Header() {
           <NavLink to="/map"       className={({isActive})=>`${linkStyle} ${isActive && active}`}>Map</NavLink>
           <NavLink to="/resources" className={({isActive})=>`${linkStyle} ${isActive && active}`}>Resources</NavLink>
           <NavLink to="/blog"      className={({isActive})=>`${linkStyle} ${isActive && active}`}>Blog</NavLink>
+          <NavLink to="/UpcomingEvents"      className={({isActive})=>`${linkStyle} ${isActive && active}`}>UpcomingEvents</NavLink>
           <NavLink to="/contact"   className={({isActive})=>`${linkStyle} ${isActive && active}`}>Contact Us</NavLink>
         </nav>
 
@@ -43,6 +44,7 @@ export default function Header() {
           <NavLink onClick={()=>setOpen(false)} to="/map"       className={({isActive})=>`${linkStyle} ${isActive && active}`}>Map</NavLink>
           <NavLink onClick={()=>setOpen(false)} to="/resources" className={({isActive})=>`${linkStyle} ${isActive && active}`}>Resources</NavLink>
           <NavLink onClick={()=>setOpen(false)} to="/blog"      className={({isActive})=>`${linkStyle} ${isActive && active}`}>Blog</NavLink>
+          <NavLink onClick={()=>setOpen(false)} to="/UpcomingEvents"       className={({isActive})=>`${linkStyle} ${isActive && active}`}>Upcoming Events</NavLink>
           <NavLink onClick={()=>setOpen(false)} to="/contact"   className={({isActive})=>`${linkStyle} ${isActive && active}`}>Contact Us</NavLink>
         </div>
       )}
