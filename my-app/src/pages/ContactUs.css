@@ -1,0 +1,84 @@
+/* src/pages/ContactUs.css */
+
+/* Container */
+.contact-wrapper {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #ffffff;           /* light background */
+  color: #333;                   /* dark text */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  font-family: system-ui, sans-serif;
+}
+
+/* Heading */
+.contact-wrapper h2 {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 1.9rem;
+}
+
+/* New blurb */
+.contact-blurb {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #555;
+}
+
+/* Labels + spacing */
+.contact-wrapper label {
+  display: block;
+  margin-bottom: 18px;
+  font-size: 0.95rem;
+}
+
+/* Inputs & text area */
+.contact-wrapper input,
+.contact-wrapper textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px 12px;
+  background: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font: inherit;
+  resize: vertical;
+}
+
+.contact-wrapper input:focus,
+.contact-wrapper textarea:focus {
+  outline: none;
+  border-color: #1e90ff;
+  box-shadow: 0 0 0 2px rgba(30,144,255,0.2);
+}
+
+/* Submit button */
+.contact-wrapper button {
+  width: 100%;
+  padding: 12px;
+  background: #1e90ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 120ms ease-in-out;
+}
+
+.contact-wrapper button:hover {
+  background: #1878d5;
+}
+
+/* Success alert */
+.alert {
+  margin-bottom: 18px;
+  padding: 10px 14px;
+  background: #28a745;
+  color: #fff;
+  border-radius: 4px;
+  text-align: center;
+}

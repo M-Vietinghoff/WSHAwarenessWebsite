@@ -1,0 +1,33 @@
+:root { --hdr-h: 80px; }      /* adjust once if you change header height */
+
+header{
+  position: sticky;
+  top: 0;
+  z-index: 3000;          /* above drawer & map */
+  height: var(--hdr-h);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.05);
+}
+
+.logo a{
+  color: #4b0082;          /* deep purple */
+  text-decoration: none;
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-right: 32px;
+}
+
+nav a{
+  margin-right: 16px;
+  color: #4b0082;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+nav a.active,
+nav a:hover{
+  text-decoration: underline;
+}
