@@ -73,7 +73,7 @@ export const mockBlogs = [
       date: "2025-06-10",
       excerpt: "Practical strategies for building confidence and finding your voice when facing uncomfortable or inappropriate workplace situations.",
       content: "Speaking up against harassment requires courage, but it's a skill that can be developed. This article provides practical techniques for building confidence, setting boundaries, and communicating assertively in difficult situations. Learn how to prepare for difficult conversations and practice self-advocacy in professional settings.",
-      image: "https://images.unsplash.com/photo-1594736797933-d0b22d6ac7b6?w=800&h=400&fit=crop",
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop",
       readTime: "7 min read",
       tags: ["confidence building", "self-advocacy", "communication"]
     },
