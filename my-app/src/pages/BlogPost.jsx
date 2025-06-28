@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { mockBlogs } from '../data/blogData.js';
+import './BlogPost.css';
 
 export default function BlogPost() {
   const { id } = useParams();
@@ -8,15 +9,12 @@ export default function BlogPost() {
 
   if (!blog) {
     return (
-      <div className="min-h-screen bg-gray-50 py-8">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">Blog Post Not Found</h1>
-            <p className="text-gray-600 mb-6">The blog post you're looking for doesn't exist.</p>
-            <Link 
-              to="/blog" 
-              className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-            >
+      <div className="blog-post-container">
+        <div className="blog-post-wrapper">
+          <div className="blog-post-not-found">
+            <h1>Blog Post Not Found</h1>
+            <p>The blog post you're looking for doesn't exist.</p>
+            <Link to="/blog">
               ← Back to Blog
             </Link>
           </div>
@@ -31,15 +29,12 @@ export default function BlogPost() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="blog-post-container">
+      <div className="blog-post-wrapper">
         {/* Back Button */}
-        <div className="mb-6">
-          <Link 
-            to="/blog" 
-            className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
-          >
-            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="back-button-container">
+          <Link to="/blog" className="back-button">
+            <svg className="back-button-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
             </svg>
             Back to Blog
@@ -47,81 +42,74 @@ export default function BlogPost() {
         </div>
 
         {/* Blog Post Content */}
-        <article className="bg-white rounded-lg shadow-lg overflow-hidden">
+        <article className="blog-post-article">
           {/* Featured Image */}
-          <div className="h-64 md:h-96 overflow-hidden">
+          <div className="blog-post-image-container">
             <img
               src={blog.image}
               alt={blog.title}
-              className="w-full h-full object-cover"
+              className="blog-post-image"
             />
           </div>
 
           {/* Article Content */}
-          <div className="p-8">
+          <div className="blog-post-content">
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="blog-post-main-title">
               {blog.title}
             </h1>
 
             {/* Meta Information */}
-            <div className="flex items-center justify-between mb-6 pb-6 border-b border-gray-200">
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white text-sm font-medium">
+            <div className="blog-post-meta">
+              <div className="blog-post-author-info">
+                <div className="blog-post-author-avatar">
                   {blog.author.split(' ').map(n => n[0]).join('')}
                 </div>
-                <div className="ml-3">
-                  <p className="text-sm font-medium text-gray-900">{blog.author}</p>
-                  <p className="text-sm text-gray-500">{formatDate(blog.date)}</p>
+                <div className="blog-post-author-details">
+                  <p className="blog-post-author-name">{blog.author}</p>
+                  <p className="blog-post-author-date">{formatDate(blog.date)}</p>
                 </div>
               </div>
-              <span className="text-sm text-gray-500">{blog.readTime}</span>
+              <span className="blog-post-read-time">{blog.readTime}</span>
             </div>
 
             {/* Tags */}
-            <div className="flex flex-wrap gap-2 mb-6">
+            <div className="blog-post-tags">
               {blog.tags.map(tag => (
-                <span
-                  key={tag}
-                  className="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full"
-                >
+                <span key={tag} className="blog-post-tag">
                   #{tag}
                 </span>
               ))}
             </div>
 
             {/* Excerpt */}
-            <div className="bg-purple-50 border-l-4 border-purple-500 p-4 mb-8">
-              <p className="text-lg text-gray-700 italic">
-                {blog.excerpt}
-              </p>
+            <div className="blog-post-excerpt">
+              <p>{blog.excerpt}</p>
             </div>
 
             {/* Main Content */}
-            <div className="prose max-w-none">
-              <p className="text-gray-700 leading-relaxed text-lg mb-6">
-                {blog.content}
-              </p>
+            <div className="blog-post-prose">
+              <p>{blog.content}</p>
               
-              {/* Additional content sections - you can expand this */}
-              <div className="space-y-6">
-                <div>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">Understanding the Impact</h2>
-                  <p className="text-gray-700 leading-relaxed">
+              {/* Additional content sections */}
+              <div className="blog-post-sections">
+                <div className="blog-post-section">
+                  <h2>Understanding the Impact</h2>
+                  <p>
                     The effects of workplace harassment extend far beyond the immediate incident. Research shows that experiencing or witnessing harassment can lead to decreased job satisfaction, reduced productivity, and significant mental health challenges. It's important to understand that these reactions are normal and valid responses to inappropriate behavior.
                   </p>
                 </div>
 
-                <div>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">Taking Action</h2>
-                  <p className="text-gray-700 leading-relaxed">
+                <div className="blog-post-section">
+                  <h2>Taking Action</h2>
+                  <p>
                     Whether you're experiencing harassment yourself or supporting someone who is, taking action is crucial. This doesn't always mean formal reporting - sometimes it means documenting incidents, seeking support from trusted colleagues or friends, or connecting with professional resources. Remember, every situation is unique, and you have the right to choose the approach that feels safest and most appropriate for your circumstances.
                   </p>
                 </div>
 
-                <div>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">Resources and Support</h2>
-                  <p className="text-gray-700 leading-relaxed">
+                <div className="blog-post-section">
+                  <h2>Resources and Support</h2>
+                  <p>
                     If you're dealing with workplace harassment, you don't have to face it alone. Many organizations offer confidential support services, and there are legal protections in place to help. Consider reaching out to your HR department, employee assistance programs, or external advocacy organizations for guidance and support.
                   </p>
                 </div>
@@ -129,64 +117,22 @@ export default function BlogPost() {
             </div>
 
             {/* Call to Action */}
-            <div className="mt-12 bg-gray-50 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Need Support?</h3>
-              <p className="text-gray-700 mb-4">
+            <div className="blog-post-cta">
+              <h3 className="blog-post-cta-title">Need Support?</h3>
+              <p className="blog-post-cta-text">
                 If this article resonates with your experience, remember that help is available. You deserve a safe and respectful workplace.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Link 
-                  to="/resources" 
-                  className="inline-flex items-center px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
-                >
+              <div className="blog-post-cta-buttons">
+                <Link to="/resources" className="blog-post-cta-primary">
                   Find Resources
                 </Link>
-                <Link 
-                  to="/contact" 
-                  className="inline-flex items-center px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors"
-                >
+                <Link to="/contact" className="blog-post-cta-secondary">
                   Contact Support
                 </Link>
               </div>
             </div>
           </div>
         </article>
-
-        {/* Related Articles */}
-        <div className="mt-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h3>
-          <div className="grid gap-6 md:grid-cols-2">
-            {mockBlogs
-              .filter(post => post.id !== blog.id)
-              .slice(0, 2)
-              .map(relatedBlog => (
-                <Link 
-                  key={relatedBlog.id}
-                  to={`/blog/${relatedBlog.id}`}
-                  className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
-                >
-                  <div className="h-32 overflow-hidden">
-                    <img
-                      src={relatedBlog.image}
-                      alt={relatedBlog.title}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h4 className="font-bold text-gray-900 mb-2 line-clamp-2">
-                      {relatedBlog.title}
-                    </h4>
-                    <p className="text-sm text-gray-600 line-clamp-2">
-                      {relatedBlog.excerpt}
-                    </p>
-                    <div className="mt-3 text-sm text-gray-500">
-                      {relatedBlog.readTime}
-                    </div>
-                  </div>
-                </Link>
-              ))}
-          </div>
-        </div>
       </div>
     </div>
   );
