@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+/* Sticky white header (logo + nav links) */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 3000;         /* above drawer & map */
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);  /* subtle line */
+  height: 80px;          /* match --hdr-h var if you use it */
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+}
+
+/* Ensure nav links wrap nicely */
+header nav a {
+  margin-right: 16px;
+  color: #4b0082;        /* same purple you used */
+  font-weight: 600;
+  text-decoration: none;
+}
+header nav a:hover { text-decoration: underline; }
+
+/* Make sure body isn’t scrolled under the header on narrow viewports */
+body { margin: 0; }
