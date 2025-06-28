@@ -1,14 +1,9 @@
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import "./Header.css";                       // ← see CSS below
 
 export default function Header() {
-  const [open, setOpen] = useState(false); // for small-screen hamburger
-
-  const linkStyle =
-    "block px-3 py-2 rounded-md text-sm font-medium hover:bg-white/10";
-  const active = "text-emerald-400";
-
   return (
+
     <header className="bg-gray-900 text-white shadow">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center h-16">
         {/* Site title / logo */}

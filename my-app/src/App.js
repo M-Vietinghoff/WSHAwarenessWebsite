@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-import Map from "./pages/Map";
+import Map from "./pages/Map"; // renamed for clarity but not required
 import Resources from "./pages/Resources";
 import Blog from "./pages/Blog";
 import ContactUs from "./pages/ContactUs";
@@ -11,10 +11,9 @@ function App() {
     <BrowserRouter>
       <Header />
 
-      {/* Main content area */}
-      <main className="p-4">
+      <main>
         <Routes>
-          <Route path="/" element={<Map />} /> {/* default */}
+          <Route path="/" element={<Map />} />
           <Route path="/map" element={<Map />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/blog" element={<Blog />} />

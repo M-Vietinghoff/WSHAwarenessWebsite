@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Avalon Sexual Assault Centre",
+    "phone": "902-422-4240",
+    "lat": 44.6486,
+    "lng": -63.5806,
+    "url": "https://avaloncentre.ca"
+  },
+  {
+    "name": "Sexual Violence NS – 24 h line",
+    "phone": "1-888-429-8167",
+    "lat": 45.0,
+    "lng": -63.0,
+    "url": "https://survivorsofabuserecovering.ca"
+  },
+  {
+    "name": "NS Human Rights Commission",
+    "phone": "1-877-269-7699",
+    "lat": 44.6514,
+    "lng": -63.5851,
+    "url": "https://humanrights.novascotia.ca"
+  },
+  {
+    "name": "Halifax Police – Victim Services",
+    "phone": "902-490-5300",
+    "lat": 44.6488,
+    "lng": -63.5752,
+    "url": "https://halifax.ca/safety-security/police"
+  }
+]
