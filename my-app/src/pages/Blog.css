@@ -33,17 +33,6 @@
   position: relative;
 }
 
-.blog-header::before {
-  content: '';
-  position: absolute;
-  top: -1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
-  border-radius: 2px;
-}
 
 .blog-title {
   font-size: 2.5rem;
