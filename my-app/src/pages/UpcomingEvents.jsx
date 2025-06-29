@@ -9,7 +9,7 @@ export default function UpcomingEvents() {
   const Event3 = useRef(null);
   const Event4 = useRef(null);
   const Event5 = useRef(null);
-  const headerHeight = 80;
+ 
 
   //Scrolling through events functionality
   const scrollSection = (elementRef) => (
