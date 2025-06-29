@@ -16,7 +16,7 @@ export default function Header() {
             <img
               src={Logo}
               alt="Candle Logo"
-              style={{ width: "32px", height: "32px" }}
+              style={{ width: "48px", height: "48px" }}
             />
           </div>
             <span className="brand-text">Candlelight</span>
