@@ -36,6 +36,7 @@ export default function MapNovaScotia({ onClickPoint, chosen, stories }) {
 
   return (
     <MapContainer
+      key="nova-scotia-map" // Add this key to prevent reinitialization
       center={[44.65, -63.57]}   /* Halifax */
       zoom={7}
       minZoom={6}
