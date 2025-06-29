@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import { Phone, MapPin, Clock, Globe, Search, Filter, Heart, Shield, Users, MessageCircle } from 'lucide-react';
+import './Resources.css';
 
 export default function Resources() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
-    { id: 'all', name: 'All Resources', icon: Heart },
-    { id: 'emergency', name: 'Emergency Help', icon: Phone },
-    { id: 'counseling', name: 'Counseling', icon: MessageCircle },
-    { id: 'legal', name: 'Legal Aid', icon: Shield },
-    { id: 'shelter', name: 'Shelter', icon: Users },
+    { id: 'all', name: 'All Resources' },
+    { id: 'emergency', name: 'Emergency Help' },
+    { id: 'counseling', name: 'Counseling' },
+    { id: 'legal', name: 'Legal Aid' },
+    { id: 'shelter', name: 'Shelter' },
   ];
 
   const resources = [
@@ -21,17 +21,21 @@ export default function Resources() {
       phone: '1-800-565-1113',
       available: '24/7',
       website: 'https://www.gov.ns.ca/coms/families/violence/',
-      description: '24-hour crisis line providing immediate support and safety planning',
-      services: ['Crisis Support', 'Safety Planning', 'Emotional Support', 'Resource Referrals']
+      description: '24-hour crisis line providing immediate support and safety planning for women experiencing domestic violence.',
+      services: ['Crisis Support', 'Safety Planning', 'Emotional Support', 'Resource Referrals'],
+      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      location: 'Province-wide'
     },
     {
       id: 2,
       category: 'emergency',
-      name: 'Emergency Police',
+      name: 'Emergency Police Services',
       phone: '911',
       available: '24/7',
-      description: 'Call immediately when life or safety is in danger',
-      services: ['Emergency Response', 'Crime Reporting', 'On-scene Protection']
+      description: 'Call immediately when life or safety is in danger. Police emergency response for immediate threats.',
+      services: ['Emergency Response', 'Crime Reporting', 'On-scene Protection'],
+      image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      location: 'Province-wide'
     },
     {
       id: 3,
@@ -41,8 +45,10 @@ export default function Resources() {
       address: 'Halifax, NS',
       available: 'Monday-Friday 9:00 AM - 5:00 PM',
       website: 'https://avaloncentre.ca/',
-      description: 'Professional counseling and support services for sexual assault survivors',
-      services: ['Individual Counseling', 'Group Therapy', 'Crisis Intervention', 'Court Support']
+      description: 'Professional counseling and support services for sexual assault survivors with experienced trauma counselors.',
+      services: ['Individual Counseling', 'Group Therapy', 'Crisis Intervention', 'Court Support'],
+      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      location: 'Halifax'
     },
     {
       id: 4,
@@ -52,8 +58,10 @@ export default function Resources() {
       address: 'Multiple locations',
       available: 'Monday-Friday 8:30 AM - 4:30 PM',
       website: 'https://www.nslegalaid.ca/',
-      description: 'Free legal services for eligible low-income individuals',
-      services: ['Legal Consultation', 'Court Representation', 'Document Assistance', 'Rights Protection']
+      description: 'Free legal services for eligible low-income individuals including family law and protection orders.',
+      services: ['Legal Consultation', 'Court Representation', 'Document Assistance', 'Rights Protection'],
+      image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      location: 'Multiple locations'
     },
     {
       id: 5,
@@ -63,8 +71,10 @@ export default function Resources() {
       address: 'Halifax, NS',
       available: '24/7',
       website: 'https://www.bryonyhouse.ca/',
-      description: 'Safe shelter for women and children fleeing domestic violence',
-      services: ['Emergency Shelter', 'Safety Planning', 'Children Services', 'Life Skills Training']
+      description: 'Safe shelter for women and children fleeing domestic violence with comprehensive support services.',
+      services: ['Emergency Shelter', 'Safety Planning', 'Children Services', 'Life Skills Training'],
+      image: 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      location: 'Halifax'
     },
     {
       id: 6,
@@ -73,19 +83,23 @@ export default function Resources() {
       phone: '902-457-4366',
       address: 'Halifax, NS',
       available: 'Monday-Friday 9:00 AM - 5:00 PM',
-      description: 'Focus on women\'s health and mental health services',
-      services: ['Mental Health Counseling', 'Health Education', 'Support Groups', 'Resource Connection']
+      description: 'Comprehensive women\'s health and mental health services with focus on trauma-informed care.',
+      services: ['Mental Health Counseling', 'Health Education', 'Support Groups', 'Resource Connection'],
+      image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      location: 'Halifax'
     },
     {
       id: 7,
       category: 'legal',
-      name: 'Women\'s Legal Education and Action Fund (LEAF)',
+      name: 'Women\'s Legal Education and Action Fund',
       phone: '902-423-0574',
       address: 'Halifax, NS',
       available: 'Monday-Friday 9:00 AM - 5:00 PM',
       website: 'https://www.leaf.ca/',
-      description: 'Legal education and advocacy for women\'s equality rights',
-      services: ['Legal Information', 'Rights Education', 'Advocacy Support', 'Court Challenges']
+      description: 'Legal education and advocacy for women\'s equality rights with specialized expertise in gender-based issues.',
+      services: ['Legal Information', 'Rights Education', 'Advocacy Support', 'Court Challenges'],
+      image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      location: 'Halifax'
     },
     {
       id: 8,
@@ -94,8 +108,10 @@ export default function Resources() {
       phone: '902-429-8167',
       address: 'Halifax Regional Municipality',
       available: '24/7',
-      description: 'Crisis intervention and mental health support',
-      services: ['Crisis Response', 'Mental Health Assessment', 'Safety Planning', 'Resource Connection']
+      description: 'Crisis intervention and mental health support with mobile response teams for immediate assistance.',
+      services: ['Crisis Response', 'Mental Health Assessment', 'Safety Planning', 'Resource Connection'],
+      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      location: 'Halifax Regional Municipality'
     }
   ];
 
@@ -106,184 +122,200 @@ export default function Resources() {
     return matchesSearch && matchesCategory;
   });
 
-  const getCategoryIcon = (categoryId) => {
-    const category = categories.find(cat => cat.id === categoryId);
-    const IconComponent = category?.icon || Heart;
-    return <IconComponent className="w-4 h-4" />;
+  const getCategoryColor = (category) => {
+    const colors = {
+      emergency: '#ef4444',
+      counseling: '#3b82f6', 
+      legal: '#8b5cf6',
+      shelter: '#10b981'
+    };
+    return colors[category] || '#6b7280';
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Header */}
-      <div className="border-b border-gray-200">
-        <div className="max-w-6xl mx-auto px-4 py-8">
-          <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">
-              Support Resources
-            </h1>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Comprehensive support resources for women in Nova Scotia, including emergency help, counseling, legal aid, and shelter services
-            </p>
-          </div>
-
-          {/* Emergency Notice */}
-          <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-8">
-            <div className="flex items-center">
-              <Phone className="w-5 h-5 text-red-600 mr-3 flex-shrink-0" />
-              <div>
-                <p className="text-red-800 font-semibold">Emergency Contact:</p>
-                <p className="text-red-700">
-                  <span className="font-bold">911</span> (Police Emergency) | 
-                  <span className="font-bold ml-4">1-800-565-1113</span> (Domestic Violence Crisis Line)
-                </p>
-              </div>
-            </div>
-          </div>
+    <div className="resources-container">
+      <div className="resources-wrapper">
+        {/* Header Section */}
+        <div className="resources-header">
+          <h1 className="resources-title">
+            Support Resources
+          </h1>
+          <p className="resources-subtitle">
+            Comprehensive support resources for women in Nova Scotia, including emergency help, counseling, legal aid, and shelter services
+          </p>
         </div>
-      </div>
 
-      <div className="max-w-6xl mx-auto px-4 py-8">
-        {/* Search and Filter */}
-        <div className="bg-gray-50 rounded-lg p-6 mb-8">
-          <div className="flex flex-col md:flex-row gap-4">
-            <div className="flex-1 relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
-                type="text"
-                placeholder="Search resources, services, or organization names..."
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-              />
-            </div>
-            <div className="relative">
-              <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <select
-                className="pl-10 pr-8 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent appearance-none bg-white min-w-[200px]"
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-              >
-                {categories.map(category => (
-                  <option key={category.id} value={category.id}>
-                    {category.name}
-                  </option>
-                ))}
-              </select>
+        {/* Emergency Notice */}
+        <div className="emergency-notice">
+          <div className="emergency-content">
+            <svg className="emergency-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            <div>
+              <p className="emergency-title">Emergency Contact:</p>
+              <p className="emergency-numbers">
+                <span className="emergency-number">911</span> (Police Emergency) | 
+                <span className="emergency-number">1-800-565-1113</span> (Domestic Violence Crisis Line)
+              </p>
             </div>
           </div>
         </div>
 
-        {/* Resources List */}
-        <div className="space-y-6">
-          {filteredResources.length === 0 ? (
-            <div className="text-center py-12 bg-gray-50 rounded-lg">
-              <p className="text-gray-500 text-lg">No matching resources found</p>
-              <p className="text-gray-400 mt-2">Try adjusting your search terms or filter criteria</p>
-            </div>
-          ) : (
-            filteredResources.map(resource => (
-              <div key={resource.id} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow duration-200">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span className="inline-flex items-center gap-1 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium border border-gray-200">
-                        {getCategoryIcon(resource.category)}
-                        {categories.find(cat => cat.id === resource.category)?.name}
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">
-                      {resource.name}
-                    </h3>
-                    <p className="text-gray-700 mb-4">
-                      {resource.description}
-                    </p>
+        {/* Search Section */}
+        <div className="search-section">
+          {/* Search Bar */}
+          <div className="search-container">
+            <input
+              type="text"
+              placeholder="Search resources, services, or organization names..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="search-input"
+            />
+            <svg className="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </div>
+
+          {/* Category Filter */}
+          <div className="category-filter">
+            <select
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              className="category-select"
+            >
+              {categories.map(category => (
+                <option key={category.id} value={category.id}>
+                  {category.name}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+
+        {/* Results Count */}
+        <div className="results-count">
+          <p>
+            Showing {filteredResources.length} {filteredResources.length === 1 ? 'resource' : 'resources'}
+            {searchTerm && ` matching "${searchTerm}"`}
+          </p>
+        </div>
+
+        {/* Resources Grid */}
+        {filteredResources.length > 0 ? (
+          <div className="resources-grid">
+            {filteredResources.map(resource => (
+              <article key={resource.id} className="resource-card">
+                {/* Resource Image */}
+                <div className="resource-image-container">
+                  <img
+                    src={resource.image}
+                    alt={resource.name}
+                    className="resource-image"
+                  />
+                  <div className="category-badge" style={{backgroundColor: getCategoryColor(resource.category)}}>
+                    {categories.find(cat => cat.id === resource.category)?.name}
                   </div>
                 </div>
 
-                {/* Contact Information */}
-                <div className="grid md:grid-cols-2 gap-4 mb-6">
-                  <div className="space-y-3">
-                    {resource.phone && (
-                      <div className="flex items-center gap-2 text-gray-700">
-                        <Phone className="w-4 h-4 text-gray-500" />
-                        <a href={`tel:${resource.phone}`} className="font-semibold text-gray-900 hover:text-gray-700">
-                          {resource.phone}
-                        </a>
-                      </div>
-                    )}
-                    {resource.address && (
-                      <div className="flex items-center gap-2 text-gray-700">
-                        <MapPin className="w-4 h-4 text-gray-500" />
-                        <span>{resource.address}</span>
-                      </div>
-                    )}
+                {/* Resource Content */}
+                <div className="resource-content">
+                  {/* Availability */}
+                  <div className="resource-availability">
+                    <span>{resource.available}</span>
                   </div>
-                  <div className="space-y-3">
-                    {resource.available && (
-                      <div className="flex items-center gap-2 text-gray-700">
-                        <Clock className="w-4 h-4 text-gray-500" />
-                        <span>{resource.available}</span>
-                      </div>
-                    )}
-                    {resource.website && (
-                      <div className="flex items-center gap-2 text-gray-700">
-                        <Globe className="w-4 h-4 text-gray-500" />
-                        <a 
-                          href={resource.website} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="text-gray-900 hover:text-gray-700 hover:underline"
-                        >
-                          Visit Website
-                        </a>
-                      </div>
-                    )}
-                  </div>
-                </div>
 
-                {/* Services */}
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Services Provided:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {resource.services.map((service, index) => (
-                      <span 
-                        key={index}
-                        className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm border border-gray-200"
-                      >
+                  {/* Title */}
+                  <h2 className="resource-title">
+                    {resource.name}
+                  </h2>
+
+                  {/* Description */}
+                  <p className="resource-description">
+                    {resource.description}
+                  </p>
+
+                  {/* Services Tags */}
+                  <div className="resource-services">
+                    {resource.services.slice(0, 3).map(service => (
+                      <span key={service} className="service-tag">
                         {service}
                       </span>
                     ))}
+                    {resource.services.length > 3 && (
+                      <span className="service-tag more-services">
+                        +{resource.services.length - 3} more
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Contact Info */}
+                  <div className="resource-footer">
+                    <div className="contact-info">
+                      <div className="contact-item">
+                        <svg className="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                        <a href={`tel:${resource.phone}`} className="contact-link">
+                          {resource.phone}
+                        </a>
+                      </div>
+                      <div className="contact-item">
+                        <svg className="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <span className="location-text">{resource.location}</span>
+                      </div>
+                    </div>
+                    {resource.website && (
+                      <a 
+                        href={resource.website} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="website-link"
+                      >
+                        Visit Website →
+                      </a>
+                    )}
                   </div>
                 </div>
-              </div>
-            ))
-          )}
-        </div>
+              </article>
+            ))}
+          </div>
+        ) : (
+          /* No Results */
+          <div className="no-results">
+            <svg className="no-results-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.47-.881-6.08-2.33" />
+            </svg>
+            <h3 className="no-results-title">No resources found</h3>
+            <p className="no-results-text">
+              Try adjusting your search criteria or filter selection.
+            </p>
+          </div>
+        )}
 
         {/* Additional Help Section */}
-        <div className="mt-12 bg-gray-50 rounded-lg p-6">
-          <div className="text-center">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Need Additional Help?</h3>
-            <p className="text-gray-600 mb-4">
-              If you need other types of support or have any questions, don't hesitate to contact the relevant organizations.
-              Your safety and well-being are the top priority.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:211" 
-                className="px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors font-semibold"
-              >
-                Call 211 for Community Resources
-              </a>
-              <a 
-                href="https://www.gov.ns.ca/coms/families/violence/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="px-6 py-3 border border-gray-900 text-gray-900 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
-              >
-                Visit Government Resources
-              </a>
-            </div>
+        <div className="help-section">
+          <h3 className="help-title">
+            Need Additional Support?
+          </h3>
+          <p className="help-description">
+            If you need other types of support or have questions, don't hesitate to reach out. Your safety and well-being are our priority.
+          </p>
+          <div className="help-actions">
+            <a href="tel:211" className="help-button primary">
+              Call 211 for Community Resources
+            </a>
+            <a 
+              href="https://www.gov.ns.ca/coms/families/violence/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="help-button secondary"
+            >
+              Visit Government Resources
+            </a>
           </div>
         </div>
       </div>
