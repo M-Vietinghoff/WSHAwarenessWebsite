@@ -1,14 +1,16 @@
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import "./Header.css";    
+import { useState } from "react"; 
+              // ← see CSS below
 
 export default function Header() {
-  const [open, setOpen] = useState(false); // for small-screen hamburger
+  const linkStyle = "px-3 py-2 rounded-md text-sm font-medium";
+  const active = "bg-gray-700";
 
-  const linkStyle =
-    "block px-3 py-2 rounded-md text-sm font-medium hover:bg-white/10";
-  const active = "text-emerald-400";
-
+  const [open, setOpen] = useState(false); 
+     
   return (
+
     <header className="bg-gray-900 text-white shadow">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center h-16">
         {/* Site title / logo */}
@@ -21,6 +23,7 @@ export default function Header() {
           <NavLink to="/map"       className={({isActive})=>`${linkStyle} ${isActive && active}`}>Map</NavLink>
           <NavLink to="/resources" className={({isActive})=>`${linkStyle} ${isActive && active}`}>Resources</NavLink>
           <NavLink to="/blog"      className={({isActive})=>`${linkStyle} ${isActive && active}`}>Blog</NavLink>
+          <NavLink to="/UpcomingEvents"      className={({isActive})=>`${linkStyle} ${isActive && active}`}>UpcomingEvents</NavLink>
           <NavLink to="/contact"   className={({isActive})=>`${linkStyle} ${isActive && active}`}>Contact Us</NavLink>
         </nav>
 
@@ -43,6 +46,7 @@ export default function Header() {
           <NavLink onClick={()=>setOpen(false)} to="/map"       className={({isActive})=>`${linkStyle} ${isActive && active}`}>Map</NavLink>
           <NavLink onClick={()=>setOpen(false)} to="/resources" className={({isActive})=>`${linkStyle} ${isActive && active}`}>Resources</NavLink>
           <NavLink onClick={()=>setOpen(false)} to="/blog"      className={({isActive})=>`${linkStyle} ${isActive && active}`}>Blog</NavLink>
+          <NavLink onClick={()=>setOpen(false)} to="/UpcomingEvents"       className={({isActive})=>`${linkStyle} ${isActive && active}`}>Upcoming Events</NavLink>
           <NavLink onClick={()=>setOpen(false)} to="/contact"   className={({isActive})=>`${linkStyle} ${isActive && active}`}>Contact Us</NavLink>
         </div>
       )}
