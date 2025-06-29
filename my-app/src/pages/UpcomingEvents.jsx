@@ -40,14 +40,14 @@ export default function UpcomingEvents() {
 })
   )
     return (
-
+       
       //Wrapper for all blocks for styling
       <div className="upcomingEventsWrapper">
-        
+        <h1 className="EventsTitle">Upcoming Events</h1>
       <div className="EventSearch">
-        <input type="text" placeholder="Search Location" className="searchInput" />
 
         <div className="searchRow">
+          <input type="text" placeholder="Search Location" className="searchInput" />
 
           {/* Search by keyword by event type and */} 
           <select className="keywordDropdown border p-2 rounded" value={selectedKeyword} onChange={(e) => setSelectedKeyword(e.target.value)} >
@@ -74,29 +74,36 @@ export default function UpcomingEvents() {
            <div className="EventsContainer"> 
           <div className="allEvents">
           <ul onClick={() => scrollSection(Event1)} ref={Event1} className="Event1" style={{ display: isEventVisible("Event1") ? "block" : "none" }}>
-            <li className="Name">Workshop,Education</li>
+            <li className="Name">Workshop: Rebuilding after Trauma</li>
             <li className="Address1">Address: 6050 University Avenue, Halifax, NS B3H</li>
             <li className="Date1">Date: 5:00PM on June 29th</li>
+            <li className="line">________________________________________________________________________________________</li>
           </ul>
           <ul onClick={() => scrollSection(Event2)} ref={Event2} className="Event2" style={{ display: isEventVisible("Event2") ? "block" : "none" }}>
-            <li className="Name">Group,Community Engagement</li>
+            <li className="Name">Trauma Charity Fundraiser</li>
             <li className="Address1">Address: 6050 University Avenue, Halifax, NS B3H</li>
             <li className="Date1">Date: 8:00PM on June 29th</li>
+            <li className="line">________________________________________________________________________________________</li>
           </ul>
           <ul onClick={() => scrollSection(Event3)} ref={Event3} className="Event3" style={{ display: isEventVisible("Event3") ? "block" : "none" }}>
-            <li className="Name">Lecture,Education</li>
+            <li className="Name">Trauma 101: How to Tell Family Members </li>
             <li className="Address1">Address: 6050 University Avenue, Halifax, NS B3H</li>
             <li className="Date1">Date: 10:00PM on June 29th</li>
+            <li className="line">________________________________________________________________________________________</li>
+            
           </ul>
           <ul onClick={() => scrollSection(Event4)} ref={Event4} className="Event4" style={{ display: isEventVisible("Event4") ? "block" : "none" }}>
-            <li className="Name">Workshop,Support</li>
+            <li className="Name">Workshop: How to Support a friend through Workplace Harrasement</li>
             <li className="Address1">Address: 6050 University Avenue, Halifax, NS B3H</li>
             <li className="Date1">Date: 11:00PM on June 29th</li>
+            <li className="line">________________________________________________________________________________________</li>
+    
           </ul>
           <ul onClick={() => scrollSection(Event5)} ref={Event5} className="Event5" style={{ display: isEventVisible("Event5") ? "block" : "none" }}>
-            <li className="Name">Lecture, Community</li>
+            <li className="Name">How communities protect Perpetrators in the Workplace</li>
             <li className="Address1">Address: 6050 University Avenue, Halifax, NS B3H</li>
             <li className="Date1">Date: 12:00PM on June 29th</li>
+            <li className="line">________________________________________________________________________________________</li>
            </ul>
         </div>
         </div>
