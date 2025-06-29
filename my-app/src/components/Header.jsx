@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "./Header.css";    
 import { useState } from "react"; 
+import Logo from '../assets/CandleNoBGpng.png';
 
 export default function Header() {
   const [open, setOpen] = useState(false); 
@@ -12,11 +13,12 @@ export default function Header() {
         <div className="brand-section">
           <NavLink to="/" className="brand-link">
             <div className="brand-icon">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="16" cy="16" r="14" fill="#6a95c2" stroke="#5a84b0" strokeWidth="2"/>
-                <path d="M12 16l3 3 6-6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </div>
+            <img
+              src={Logo}
+              alt="Candle Logo"
+              style={{ width: "32px", height: "32px" }}
+            />
+          </div>
             <span className="brand-text">Candlelight</span>
           </NavLink>
         </div>
