@@ -4,25 +4,27 @@ export default function UpcomingEvents() {
   const Event1 = useRef(null);
   const Event2 = useRef(null);
   const Event3 = useRef(null);
+  const headerHeight = 80;
 
   const scrollSection = (elementRef) => (
+
     window.scrollTo({
-      top: elementRef.current.offsetTop,
-      behavior: "smooth"
-    })
+  top: elementRef.current.offsetTop,
+  behavior: "smooth"
+})
   )
     return (
-      <div>
+      <div className="upcomingEventsWrapper">
         
       <div className="EventSearch">
         <input type="text" placeholder="Search Location" className="searchInput" />
 
         <div className="placeholderRow">
          <h3 className="text-2xl font-bold">Distance Place Holder</h3>
-          <h3 className="text-2xl font-bold">Keywords Placeholder</h3>
+          <h3 className="text-2xl font-bold">Keywords Placeßholder</h3>
         </div>
       </div>
-        <div className="EventsContainer" style={{ height: "500px", overflowY: "auto"}}>
+        <div className="EventsContainer" style={{ height: "400px", overflowY: "auto"}}>
          <ul onClick={() => scrollSection(Event1)} ref={Event1} className="Event1">
             <li className="Name1">Event Name</li>
             <li className="Address1">Address: 6050 University Avenue, Halifax, NS B3H</li>

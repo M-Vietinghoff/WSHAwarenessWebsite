@@ -1,7 +1,14 @@
 import { NavLink } from "react-router-dom";
-import "./Header.css";                       // ← see CSS below
+import "./Header.css";    
+import { useState } from "react"; 
+              // ← see CSS below
 
 export default function Header() {
+  const linkStyle = "px-3 py-2 rounded-md text-sm font-medium";
+  const active = "bg-gray-700";
+
+  const [open, setOpen] = useState(false); 
+     
   return (
 
     <header className="bg-gray-900 text-white shadow">
