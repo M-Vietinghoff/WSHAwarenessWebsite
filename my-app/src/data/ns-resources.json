@@ -26,5 +26,41 @@
     "lat": 44.6488,
     "lng": -63.5752,
     "url": "https://halifax.ca/safety-security/police"
+  },
+  {
+    "name": "Antigonish Women’s Resource Centre & SASA",
+    "phone": "902-863-6221",
+    "lat": 45.6196,
+    "lng": -61.9981,
+    "url": "https://awrcsasa.ca"
+  },
+  {
+    "name": "Every Woman’s Centre (Sydney)",
+    "phone": "902-567-1212",
+    "lat": 46.1368,
+    "lng": -60.1942,
+    "url": "https://everywomanscentre.com"
+  },
+  {
+    "name": "Tri-County Women’s Centre (Yarmouth)",
+    "phone": "902-742-0085",
+    "lat": 43.8375,
+    "lng": -66.1204,
+    "url": "https://tricountywomenscentre.org"
+  },
+  {
+    "name": "VON SANE Response",
+    "phone": "1-833-757-7263",
+    "lat": 45.365,
+    "lng": -63.286,
+    "url": "https://www.nshealth.ca/sane"
+  },
+  {
+    "name": "NS Sexual Assault Nurse Examiner (SANE) Program – Info Line",
+    "phone": "1-833-757-7263",
+    "lat": 45.0,
+    "lng": -63.0,
+    "url": "https://www.nshealth.ca/sane"
   }
 ]
+ 
