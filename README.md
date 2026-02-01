@@ -5,7 +5,7 @@
 
 **Tech Team - Full Stack Development**
 - Huidong Xu
-- Michaela Vieting
+- Michaela Vietinghoff
 - YinNing Zhu
 - Zain Abideen
 
